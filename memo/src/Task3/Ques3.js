@@ -2,20 +2,29 @@ import React, { useState } from "react";
 import "./Style3.css";
 
 function Ques3() {
+  // Make States for Amount
   const [amount, setAmount] = useState("");
+  // UseState for "From Country"
   const [fCountry, setFCountry] = useState("");
+  // UseState for "To Country"
   const [tcountry, setTCountry] = useState("");
+  // UseState for Result
   const [result, setResult] = useState("");
+  // Get Amount Input Values
   const amountHandler = (e) => {
     setAmount(e.target.value);
   };
+  // Get From country value
   const fromSelector = (e) => {
     setFCountry(e.target.value);
   };
+  // Get To Country value
   const toSelector = (e) => {
     setTCountry(e.target.value);
   };
+  // Exchange Handler
   const exchangeHandler = () => {
+    // Check Validation
     if (amount === "") {
       alert("Empty Amount Can Not Be Converted");
       document.getElementById("amount").focus();
@@ -29,6 +38,7 @@ function Ques3() {
       alert("Please Select Country");
       document.getElementById("to").focus();
     } else {
+      // After Validation do calcution for all possible case
       let tempResult = 0;
       let tempAmount = amount;
       let fromCountry = fCountry;
@@ -97,7 +107,9 @@ function Ques3() {
         </div>
         <div className="display_result"></div>
         <div>
-          <button className="btnTask3" onClick={exchangeHandler}>Get Exchange Rate</button>
+          <button className="btnTask3" onClick={exchangeHandler}>
+            Get Exchange Rate
+          </button>
         </div>
 
         <h3>{result}</h3>

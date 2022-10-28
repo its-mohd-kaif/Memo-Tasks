@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
+// Import Notecontext
 import { noteContext } from "../App";
 
 function ComponentD() {
+  // Make variable data and store value of context 
   let data = useContext(noteContext);
   return (
     <>

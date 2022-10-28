@@ -1,28 +1,33 @@
 import React, { useState, useEffect } from "react";
 import "./Style4.css";
 function Ques4() {
+  // UseState For Input Text Field
   const [text, setText] = useState("");
-  // const [result,setResult]=useState("");
-
+  // UseState For holding total character Length
   const [char, setChar] = useState("");
+  // UseState For holding total words
   const [word, setWord] = useState("");
+  // Text Handler
   const textHandler = (e) => {
     setText(e.target.value);
     let char = e.target.value;
+    // Value of character length put into SetChar State
     setChar(char.length);
   };
   useEffect(() => {
-    //Runs on the first render
-    //And any time any dependency value changes
+    // Split string when space is found
     const arr = text.split(" ");
-
+    // Store word count in wordLength
     let wordLength = arr.filter((word) => word !== "").length;
+    // Put value of wordLength into word State
     setWord(wordLength);
   }, [text]);
+  // Convert String Lower Case into Upper Case
   const upperBtn = () => {
     let tempText = text.toUpperCase();
     setText(tempText);
   };
+  // Convert String Upper Case into Lowercase
   const lowerBtn = () => {
     let tempText = text.toLowerCase();
     setText(tempText);
