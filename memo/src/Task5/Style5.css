@@ -1,3 +1,14 @@
-.task5{
+.Task5{
     margin-bottom: 10em;
+}
+.btnTask5{
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    font-size: large;
+    border-radius: 15px;
+}
+.spanTask5{
+    margin-right: 10px;
 }
