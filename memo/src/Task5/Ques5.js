@@ -51,10 +51,11 @@ function Ques5() {
     if ((num = num.toString()).length > 9)
       return setResult("Number Limit Reached");
     // Make Variable "n" and concate with 9 digits like...
-    // If user Press 23 in inbox so "n" store "000000023"
+    // Ex. If user Press 23 in inbox so "n" store "00 00 00 0 23"
     let n = ("000000000" + num)
       .substr(-9)
       .match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+      
 
     if (!n) return;
     // Make Str Variable
